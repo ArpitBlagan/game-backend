@@ -15,7 +15,7 @@ const app=express();
 app.use(cookieParser());app.use(express.json());
 //So that from cilent side we can get requestion form any url
 app.use(cors({
-  origin:['http://localhost:5173','*','https://6508b9510c4f2c560504bb9a--fluffy-rabanadas-5ba5e8.netlify.app'],
+  origin:['http://localhost:5173','*','https://6508bd7008aa4155dd900da5--genuine-sunshine-07631f.netlify.app'],
   credentials:true
 }))
 app.use(express.urlencoded({extended:true}))
