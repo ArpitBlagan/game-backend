@@ -65,7 +65,7 @@ exports.logIn=asyncHandler(async(req,res)=>{
         //In id we are not making it httpOnly true because we have to access it in front end
         //using js cookie library if we use httpOnly:true it will not allow us to access it
         res.cookie("id","ok",{
-            path:'/'
+            path:'/',
             sameSite: 'none',
             secure:true});
         // const cookie=`token=${jwt};`
