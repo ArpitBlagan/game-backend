@@ -53,9 +53,11 @@ exports.logIn=asyncHandler(async(req,res)=>{
             secure:true
         });
         if(user.isAdmin){
-            res.cookie("admin","true");
+            res.cookie("admin","true",{sameSite: 'none',
+            secure:true});
         }
-        else{res.cookie("admin","false");}
+        else{res.cookie("admin","false",{sameSite: 'none',
+            secure:true});}
         //In id we are not making it httpOnly true because we have to access it in front end
         //using js cookie library if we use httpOnly:true it will not allow us to access it
         res.cookie("id","ok",{
