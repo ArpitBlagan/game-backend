@@ -4,7 +4,7 @@ const jwt=require('jsonwebtoken');
 exports.validate=asyncHandler(async(req,res,next)=>{
     //using the cookie that we send while user login in our app
     const token=req.cookies.jwt;console.log(token);
-        jwt.verify(token,process.env.ACCESS_TOKEN,(err,decoded)=>{
+        jwt.verify(token,'ArpitBlagan',(err,decoded)=>{
             if(err){
                 res.status(401).json({
                     message:"TokenExpired"
