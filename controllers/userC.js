@@ -82,7 +82,7 @@ exports.logOut=asyncHandler(async(req,res)=>{
         httpOnly:true,
         sameSite: 'none',
         secure: true, 
-    });res.cookie("admin","false"{
+    });res.cookie("admin","false",{
         sameSite: 'none',
             secure:true
     });
