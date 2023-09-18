@@ -7,7 +7,7 @@ const cors=require('cors');
 const cookieParser=require('cookie-parser');
 const Router=require('./Router');
 //connect to DB
-mongoose.connect(process.env.URL,{
+mongoose.connect("mongodb+srv://Arpit:Ab123@cluster0.j4fl22k.mongodb.net/assignment",{
     useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(con=>{console.log("connnected")});
