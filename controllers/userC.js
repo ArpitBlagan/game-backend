@@ -43,7 +43,7 @@ exports.logIn=asyncHandler(async(req,res)=>{
                 email:user.email,
                 name:user.name
             }
-        },process.env.ACCESS_TOKEN,{expiresIn:"30m"});
+        },"ArpitBlagan",{expiresIn:"30m"});
         //send it to user through cookies
         res.cookie("jwt",token,{
             //30 days in milisecond
