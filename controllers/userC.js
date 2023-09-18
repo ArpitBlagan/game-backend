@@ -54,20 +54,19 @@ exports.logIn=asyncHandler(async(req,res)=>{
         });
         if(user.isAdmin){
             res.cookie("admin","true",{
-                domain:'localhost',
             path:'/',
             sameSite: 'none',
             secure:true});
         }
         else{res.cookie("admin","false",{
-            domain:'localhost',
+            
             path:'/',
             sameSite: 'none',
             secure:true});}
         //In id we are not making it httpOnly true because we have to access it in front end
         //using js cookie library if we use httpOnly:true it will not allow us to access it
         res.cookie("id","ok",{
-            domain:'localhost',
+        
             path:'/',
             sameSite: 'none',
             secure:true});
@@ -89,13 +88,13 @@ exports.logOut=asyncHandler(async(req,res)=>{
         sameSite: 'none',
         secure: true, 
     });res.cookie("admin","false",{
-        domain:'localhost',
+       
         path:'/',
         sameSite: 'none',
             secure:true
     });
     res.cookie("id","",{
-        domain:'localhost',
+        
         path:"/",
         sameSite: 'none',
             secure:true,
