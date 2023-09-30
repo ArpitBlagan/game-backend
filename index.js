@@ -18,8 +18,7 @@ app.use(cors({
   origin:['http://localhost:5173','*','https://6508bd7008aa4155dd900da5--genuine-sunshine-07631f.netlify.app'],
   credentials:true
 }))
-app.use(express.urlencoded({extended:true}))
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({extended:true}));
 //for cookies to send to cilent to store in their browser
 
 app.use('/game',Router);
